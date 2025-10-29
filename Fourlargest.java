@@ -1,0 +1,32 @@
+class Fourlargest
+{
+	public static void main(String args[])
+	{
+		int arr[]={10,20,30,40,50,60,80,70,80};
+		int n=arr.length;
+		int largest=0;
+		int slargest=0;
+		int Tlargest=0;
+		int Flargest=0;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i]>largest)
+			{
+				Flargest=Tlargest;
+				Tlargest=slargest;
+				slargest=largest;
+				largest=arr[i];
+			}
+			else if(arr[i]>slargest&&arr[i]!=largest)
+			{
+				Flargest=Tlargest;
+				Tlargest=slargest;
+				slargest=arr[i];
+				
+			}
+			
+			
+		}
+		System.out.println(Flargest);
+	}
+}
